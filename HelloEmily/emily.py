@@ -1,3 +1,4 @@
+import greeting
+
 if __name__ == '__main__':
-    print("Hello Emily!")
-    print("I'm not eEmily")
+    print(greeting.hello("Emily"))
