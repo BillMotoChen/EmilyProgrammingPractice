@@ -4,4 +4,4 @@ def hello(name: str) -> str:
     :param name: name
     :return: greetings
     """
-    return "Hello " + name
+    return "Helloooo " + name
