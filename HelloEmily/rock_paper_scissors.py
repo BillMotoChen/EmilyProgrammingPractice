@@ -30,7 +30,10 @@ import random
 game_images = [rock, paper, scissors]
 
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
-print(game_images[user_choice])
+if user_choice >= 3 or user_choice < 0:
+  print("This is an invalid number.")
+else:
+  print(game_images[user_choice])
 
 # Generates a random number between 0 and 2
 computer_choice = random.randint(0, 2)
