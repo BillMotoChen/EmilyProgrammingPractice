@@ -1,5 +1,7 @@
 fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
-veggies = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
 
-dirty_dozen = [fruits, veggies]
-print(dirty_dozen)
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen[1][1])
+print(dirty_dozen[1][3])
