@@ -18,23 +18,25 @@ def divide(n1, n2):
 
 operations = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
-num1 = int(input("What's the first number?: "))
+def calculator():
+    num1 = int(input("What's the first number?: "))
+    for symbol in operations:
+        print(symbol)
+    should_continue =  True
 
-for symbol in operations:
-    print(symbol)
-operation_symbol = input("Pick an operation from the line above: ")
+    while should_continue == True:
+        operation_symbol = input("Pick an operation: ")
+        num2 = int(input("What's the next number?: "))
+        calc_function = operations[operation_symbol]
+        answer = calc_function(num1, num2)
 
-num2 = int(input("What's the second number?: "))
+        print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-calc_function = operations[operation_symbol]
-first_answer = calc_function(num1, num2)
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ").lower() == "y":
+            num1 = answer
+        else:
+            should_continue = False
+            calculator()
 
-print(f"{num1} {operation_symbol} {num2} = {first_answer}")
+calculator()
 
-# what if...
-operation_symbol = input("Pick an operation from the line above: ")
-num3 = int(input("What's the next number?: "))
-calc_function = operations[operation_symbol]
-second_answer = calc_function(first_answer, num3)
-
-print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
